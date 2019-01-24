@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Юрий Багдасарян](https://up.htmlacademy.ru/htmlcss/24/user/806047).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Рус] (https://htmlacademy.ru/profile/vanillawulf).
 
 ---
 

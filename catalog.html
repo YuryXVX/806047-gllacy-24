@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Сливочное мороженное</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-logo">
+        <a class="main-logo" href="index.html">
           <img src="img/logo.svg" width="150" height="65" alt="Логотип Глейси">
         </a>
         <ul class="nav-list">
@@ -70,19 +72,21 @@
               <ul class="buy-list">
                 <li class="buy-item">
                   <button class="buy-button-remove"><span>Убрать из корзины</span></button>
-                  <img class="buy-img" src="" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                  <img class="buy-img" src="img/icecream-small-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                   <a href="#">Пломбир с апельсиновым джемом</a>
                   <p class="buy-calculator">1,5 кг x <span>200 руб.</span></p>
                   <p class="buy-price">300 руб</p>
                 </li>
                 <li class="buy-item">
                   <button class="buy-button-remove"><span>Убрать из корзины</span></button>
-                  <img class="buy-img" src="" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                  <img class="buy-img" src="img/icecream-small-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
                   <a href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
                   <p class="buy-calculator">1,5 кг x <span>300 руб.</span></p>
                   <p class="buy-price">450 руб</p>
                 </li>
               </ul>
+              <span>Итого: 750 руб.</span>
+              <a class="buy-button-order" href="#">Оформить заказ</a>
             </div>
           </div>
         </div>
@@ -115,12 +119,15 @@
             </fieldset>
             <fieldset class="filter-form-item">
               <legend class="visually-hidden">Cортировка по цене:</legend>
-              <span class="lower-cost">100p.</span>
-              <span class="lower-cost">500p.</span>
+              <div>
+                <span>Цена:</span>
+                <span class="lower-cost">100p.</span>
+                <span class="lower-cost">500p.</span>
+              </div>
               <div class="prace-range">
                 <label for="min-price" class="visually-hidden">Oт</label>
                 <input type="text" name="min-price" id="min-price" value="100">
-                <label for="max-price">До</label>
+                <label for="max-price" class="visually-hidden">До</label>
                 <input type="text" name="max-price" id="max-price" value="500">
                 <div class="price-control">
                   <div class="range-scale">
@@ -135,7 +142,7 @@
               <legend class="filter-form-title">Жирность:</legend>
               <ul class="filter-fatcontent">
                 <li>
-                  <input type="radio" name="fatcontent" value="low" id="low-fat"class="visually-hidden filter-input-radio">
+                  <input type="radio" name="fatcontent" value="low" id="low-fat" class="visually-hidden filter-input-radio">
                   <label for="low-fat">0%</label>
                 </li>
                 <li>

@@ -75,8 +75,6 @@ input[type="radio"].visually-hidden {
 
 /* Навигация */
 
-/* cетка по приколу */
-
 .main-navigation {
   padding: 0px 27px;
 }
@@ -278,11 +276,14 @@ input[type="radio"].visually-hidden {
   line-height: 1.09;
 }
 /* Catalog */
+
 .catalog-wrapper {
   padding: 0 27px;
+
 }
 
 .catalog-list {
+
   list-style: none;
   padding: 0;
   margin: 0;
@@ -293,8 +294,32 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
-.catalog-item img {
-  position: relative;
+.catalog-item::before {
+  content: "";
+
+  transform: translate(-50%, -50%) scale(0);
+  width: 293px;
+  height: 405px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+}
+
+.catalog-item:hover {
+  z-index: 2;
+}
+
+.catalog-item:hover::before{
+  transform: translate(0%, 0%) scale(1);
+}
+
+.catalog-item:hover .catalog-button {
+  display: block;
+}
+
+
+.catalog-img {
   display: block;
   border-radius: 90%;
 }
@@ -337,11 +362,10 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-button {
-  display: inline-block;
+  display: none;
   padding: 13px 17px;
 
-  margin: 0 auto;
-
+  position: absolute;
   color: #ffffff;
   font-size: 18px;
   font-weight: bold;

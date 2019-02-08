@@ -41,7 +41,7 @@ body {
   line-height: 1.38;
   font-size: 16px;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 500;
 
   background-color: #849d8f;
 }
@@ -59,16 +59,12 @@ img {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
-
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -101,7 +97,7 @@ input[type="radio"].visually-hidden {
 
 .nav-list {
   width: 370px;
-
+  display: flex;
   padding: 0;
   margin: 0;
 
@@ -111,38 +107,37 @@ input[type="radio"].visually-hidden {
   line-height: 1.13;
 }
 
-.nav-item a::after {
-  content: "";
-
-  position: relative;
-
-  display: block;
-  height: 1px;
-  background-color: rgba(255, 255, 255, .2);
-}
-
-.nav-item a {
-  display: block;
+.nav-item {
   padding: 14px 9px;
-  text-decoration: none;
-  color: #ffffff;
 }
 
-.nav-item a:hover,
-.nav-item a:focus {
+.nav-item:hover,
+.nav-item:focus {
   padding: 14px 9px;
   border-radius: 20px;
-
   background-color: #ffffff;
   color: #333333;
 }
 
-.nav-item a:active {
-  padding: 13px 9px;
-  border-radius: 20px;
-
+.nav-item:active {
   background-color: #d07058;
+}
+
+.nav-item a {
+  display: block;
+  text-decoration: none;
   color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-item:hover a,
+.nav-item:focus a {
+  color: #333333;
+}
+
+.nav-item:active a {
+  color: #ffffff;
+  border-bottom: none;
 }
 
 .nav-item-active a {
@@ -154,6 +149,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-nav-wrapper {
+  display: flex;
   width: 245px;
 }
 
@@ -192,9 +188,12 @@ input[type="radio"].visually-hidden {
   margin-left: auto;
   display: block;
   position: relative;
-  padding: 5px 17px 5px 35px;
-  background-color: rgba(255, 255, 255, .2);
+  padding: 10px 17px 10px 35px;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
 }
 
 .button-login svg {
@@ -230,11 +229,13 @@ input[type="radio"].visually-hidden {
 
   position: relative;
 
-  padding: 5px 15px 5px 35px;
-  background-color: rgba(255, 255, 255, .2);
+  padding: 10px 15px 10px 35px;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 
   color: #ffffff;
+  font-size: 14px;
+  line-height: 1.14;
 }
 
 .current {
@@ -264,7 +265,7 @@ input[type="radio"].visually-hidden {
 
 .contact-info p {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.14;
 }
 
@@ -275,35 +276,59 @@ input[type="radio"].visually-hidden {
   font-size: 22px;
   line-height: 1.09;
 }
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 1.14;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: #ffbc9e;
+}
+
+.breadcrumbs-current a {
+  border-bottom: none;
+}
+
+.container h1 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+
 /* Catalog */
 
 .catalog-wrapper {
   padding: 0 27px;
-
 }
 
 .catalog-list {
-
-  list-style: none;
+  /*display: flex;
+  flex-wrap: wrap; */
   padding: 0;
   margin: 0;
+
+  list-style: none;
 }
 
 .catalog-item {
+  padding: 0 10px;
+  margin-bottom: 30px;
   width: 266px;
   position: relative;
-}
-
-.catalog-item::before {
-  content: "";
-
-  transform: translate(-50%, -50%) scale(0);
-  width: 293px;
-  height: 405px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 5px;
-  position: absolute;
-  z-index: -1;
 }
 
 .catalog-item:hover {
@@ -311,38 +336,56 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item:hover::before{
-  transform: translate(0%, 0%) scale(1);
+  content: "";
+
+  display: block;
+
+  position: absolute;
+  left: -4px;
+  top: -8px;
+  width: 293px;
+  height: 405px;
+
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  z-index: -1;
 }
 
 .catalog-item:hover .catalog-button {
   display: block;
 }
 
-
 .catalog-img {
   display: block;
   border-radius: 90%;
+  margin-bottom: 15px;
 }
 
-.catalog-title a {
+.catalog-title {
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
 
   padding: 0 15px;
-
+  align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.catalog-title a:hover,
-.catalog-title a:focus {
+.catalog-title:hover,
+.catalog-title:focus {
+  color: #ffbc9e;
+  border-bottom: 1px solid #ffbc9e;
+}
+
+.catalog-title:active {
   color: #ffbc9e;
   border-bottom: 1px solid #ffbc9e;
 }
 
 .catalog-price {
   font-size: 45px;
+  line-height: 1;
   font-weight: bold;
   position: absolute;
   top: 200px;
@@ -350,15 +393,11 @@ input[type="radio"].visually-hidden {
 
 .catalog-weight {
   font-size: 30px;
+  line-height: 1.5;
   font-weight: bold;
   position: absolute;
-  top: 215px;
-  left: 105px;
-}
-
-.catalog-title a:active {
-  color: #ffbc9e;
-  border-bottom: 1px solid #ffbc9e;
+  top: 205px;
+  left: 110px;
 }
 
 .catalog-button {
@@ -368,8 +407,10 @@ input[type="radio"].visually-hidden {
   position: absolute;
   color: #ffffff;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
+  left: 40px;
+  top: 330px;
 
   border-radius: 20px;
   background-color: #e74a35;
@@ -399,7 +440,7 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-.main-info h1 {
+.main-info h2 {
   font-size: 24px;
   text-align: left;
   color: #323232;
@@ -411,7 +452,7 @@ input[type="radio"].visually-hidden {
 .main-info-list {
   padding: 0;
   margin: 0;
-
+  line-height: 1.25;
   list-style: none;
 
   color: #323232;
@@ -470,10 +511,26 @@ input[type="radio"].visually-hidden {
 }
 
 .blog-form input {
-  font: inherit;
-  color: #999999;
+  padding: 15px 208px 15px 15px;
 
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
   border-radius: 5px;
+}
+
+.blog-form input:hover {
+  box-shadow: inset 0 0 0 2px rgba(154, 154, 154, 0.52);
+}
+
+.blog-form input:focus {
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, .52);
+}
+
+.blog-form input:placeholder {
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 .blog-form-button {

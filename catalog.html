@@ -86,7 +86,7 @@
                     <button class="buy-button-remove"><span>Убрать из корзины</span></button>
                     <img class="buy-img" src="img/icecream-small-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                     <a href="#">Пломбир с апельсиновым джемом</a>
-                    <p class="buy-calculator">1,5 кг x <span>200 руб.</span></p>
+                    <p class="buy-calculator">1,5 кг x<span> 200 руб.</span></p>
                     <p class="buy-price">300 руб</p>
                   </li>
                   <li class="buy-item">
@@ -106,16 +106,18 @@
       </nav>
       <div class="contact-info">
         <p class="contact-info-description">С 10 до 20, ежедневно</p>
-        <a  class="contact-info-tel" href="tel:+7812450-25-25">8812450-25-25</a>
+        <a  class="contact-info-tel" href="tel:+7812450-25-25">8 812 450-25-25</a>
       </div>
     </header>
 
     <main class="container">
-      <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#">Каталог</a></li>
-        <li class="breadcrumbs-current"><a href="#">Сливочное</a></li>
-      </ul>
+      <div class="breadcrumbs-wrapper">
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="#">Каталог</a></li>
+          <li class="breadcrumbs-current"><a href="#">Сливочное</a></li>
+        </ul>
+      </dir>
       <h1 class="catalog-main-title">Сливочное мороженое</h1>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -207,7 +209,7 @@
           <ul class="catalog-list">
             <li class="catalog-item">
               <img class="catalog-img" src="img/icecream-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-              <span class="catalog-price">310₽</span><span class="catalog-weight">/кг</span>
+              <span class="catalog-price">310 ₽</span><span class="catalog-weight">/кг</span>
               <a href="#" class="catalog-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
               <a class="catalog-button" href="#">Быстрый просмотр</a>
             </li>
@@ -280,13 +282,15 @@
           </ul>
         </div>
         <div class="pagination-wrapper">
+          <a class="pagination-control"><span class="visually-hidden">Предыдущая страница каталога</span></a>
           <ul class="pagination-list">
-            <li class="pagination-item-current"><a>1</a></li>
-            <li class="pagination-item-current"><a href="#">2</a></li>
-            <li class="pagination-item-current"><a href="#">3</a></li>
-            <li class="pagination-item-current"><a href="#">4</a></li>
-            <li class="pagination-item-current"><a href="#">5</a></li>
+            <li class="pagination-item pagination-current"><a>1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="#">4</a></li>
+            <li class="pagination-item"><a href="#">5</a></li>
           </ul>
+          <a class="pagination-control" href="#"><span class="visually-hidden">Следующая страница каталога</span></a>
         </div>
       </section>
     </main>
@@ -330,10 +334,12 @@
           <li class="about-list-item"><a href="#">Экологические стандарты</a></li>
         </ul>
       </div>
-      <p class="copyright">Сделано в <a href="#">HTML Academy</a> © 2017</p>
-      <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss">
+      <div class="copyright-wrapper">
+        <p class="copyright">Сделано в <a href="#">HTML Academy</a> © 2017</p>
+        <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss">
         <span class="visually-hidden">Логотип HTML Academy</span>
       </a>
+      </div>
     </footer>
   </body>
 </html>

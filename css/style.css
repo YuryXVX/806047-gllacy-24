@@ -43,7 +43,6 @@ body {
   color: #ffffff;
   font-weight: 500;
 
-
 }
 
 a {
@@ -90,7 +89,7 @@ input[type="radio"].visually-hidden {
   background-color: #849d8f;
 }
 
-/* Навигация */
+/* navigation */
 
 .main-navigation {
   display: flex;
@@ -923,7 +922,7 @@ input[type="radio"].visually-hidden {
 
 .product {
   padding: 0 27px;
-  margin-bottom: 30px;
+  margin-bottom: -20px;
 }
 
 .product-list {
@@ -935,35 +934,77 @@ input[type="radio"].visually-hidden {
 }
 
 .product-list-item {
-  width: 267px;
+  padding: 0 10px;
+  padding-right: 14px;
+  margin-bottom: 38px;
+  width: 266px;
+  position: relative;
+}
+
+.product-list-item:hover {
+  z-index: 2;
+}
+
+.product-list-item:hover::after{
+  content: "";
+
+  display: block;
+
+  position: absolute;
+  left: -4px;
+  top: -8px;
+  width: 293px;
+  min-height: 127%;
+
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  z-index: -1;
 }
 
 .product-img {
   border-radius: 50%;
   display: block;
+  margin-bottom: 14px;
   width: 267px;
+  height: 267px;
 }
 
 .product-price {
   font-size: 45px;
-
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
   line-height: 1;
   font-weight: bold;
+  position: absolute;
+  top: 209px;
+  left: 9px;;
+}
+
+.product-price::after {
+  content: "₽";
+  margin-left: 7px;
 }
 
 .product-weight {
   font-size: 30px;
   line-height: 1.5;
   font-weight: bold;
+  position: absolute;
+  top: 214px;
+  left: 122px;
+}
+
+.product-title-wrap  {
+  text-align: center;
 }
 
 .product-title {
+  line-height: 1.38;
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
 
-  padding: 0 15px;
+  text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -979,8 +1020,63 @@ input[type="radio"].visually-hidden {
 }
 
 .product-button {
-
+  display: none;
+  position: relative;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.33;
+  border-radius: 20px;
+  background-color: #e74a35;
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  text-align: center;
 }
+
+.product-button:hover,
+.product-button:focus {
+  box-shadow: 0px 2px 2px 0 #ac1000;
+  background-color: #f27f65;
+}
+
+.product-button:active {
+  background-color: #d94a34;
+  box-shadow: inset 0px 2px 2px 0 #942718;
+}
+
+.product-list-item:hover .product-button {
+  position: absolute;
+  display: block;
+  text-align: center;
+  bottom: -57px;
+  left: 7px;
+  right: 7px;
+  padding: 11px 12px;
+  margin: 0 40px;
+}
+
+.product-list-item::before {
+  content: "";
+
+  position: absolute;
+  display: block;
+  width: 61px;
+  height: 61px;
+
+  background-color: tomato;
+  background: url("../img/hit.svg") no-repeat;
+}
+
+.catalog-price {
+  font-size: 45px;
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  line-height: 1;
+  font-weight: bold;
+  position: absolute;
+  top: 209px;
+  left: 9px;
+}
+
 
 /* Breadcrumbs */
 
@@ -1010,8 +1106,8 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.breadcrumbs li:nth-child(1)::before,
-.breadcrumbs li:nth-child(2)::before {
+.breadcrumbs li::before,
+.breadcrumbs li::before {
   content: "»";
 
   position: absolute;
@@ -1019,6 +1115,10 @@ input[type="radio"].visually-hidden {
 
   width: 15px;
   height: 13px;
+}
+
+.breadcrumbs li:last-child::before {
+  display: none;
 }
 
 .breadcrumbs a:hover,
@@ -1047,23 +1147,25 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-
+  justify-content: space-between;
   list-style: none;
 }
 
 .catalog-item {
   padding: 0 10px;
-  padding-right: 15px;
-  margin-bottom: 35px;
+  padding-right: 14px;
+  margin-bottom: 38px;
   width: 266px;
   position: relative;
 }
 
-.catalog-item:hover {
+.catalog-item:hover,
+.catalog-item:focus {
   z-index: 2;
 }
 
-.catalog-item:hover::before{
+.catalog-item:hover::before,
+.catalog-item:focus::before {
   content: "";
 
   display: block;
@@ -1072,31 +1174,46 @@ input[type="radio"].visually-hidden {
   left: -4px;
   top: -8px;
   width: 293px;
-  min-height: 110%;
+  min-height: 127%;
 
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   z-index: -1;
 }
 
-.catalog-item:hover .catalog-button {
-  display: inline-block;
+.catalog-item:hover .catalog-button,
+.catalog-item:focus .catalog-button {
+  position: absolute;
+  display: block;
+  text-align: center;
+  bottom: -57px;
+  left: 7px;
+  right: 7px;
+  padding: 11px 12px;
+  margin: 0 40px;
 }
 
 .catalog-img {
   display: block;
   border-radius: 90%;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+  width: 267px;
+  height: 267px;
+}
+
+.catalog-title-wrap  {
+  padding: ;
+  text-align: center;
 }
 
 .catalog-title {
+  line-height: 1.38;
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
 
-  padding: 0 15px;
-  align-items: center;
+  text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -1113,12 +1230,17 @@ input[type="radio"].visually-hidden {
 
 .catalog-price {
   font-size: 45px;
-
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
   line-height: 1;
   font-weight: bold;
   position: absolute;
-  top: 210px;
-  left: 10px;
+  top: 209px;
+  left: 9px;
+}
+
+.catalog-price::after {
+  content: "₽";
+  margin-left: 7px;
 }
 
 .catalog-weight {
@@ -1126,24 +1248,19 @@ input[type="radio"].visually-hidden {
   line-height: 1.5;
   font-weight: bold;
   position: absolute;
-  top: 215px;
-  left: 115px;
+  top: 214px;
+  left: 122px;
 }
 
-
 .catalog-button {
-  padding: 10px 17px;
-
   display: none;
-  vertical-align: center;
+
   position: relative;
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
   text-decoration: none;
-  top: 12px;
-  left: 30px;
-
+  line-height: 1.33;
   border-radius: 20px;
   background-color: #e74a35;
   box-shadow: 0px 1px 2px 0 #ac1000;
@@ -1470,7 +1587,7 @@ input[type="radio"].visually-hidden {
   width: 255px;
   position: absolute;
   right: 103px;
-  top:  2000px;
+  top:  1955px;
   background-color: #ffffff;
   color: #323232;
   padding: 17px 21px 30px 24px;

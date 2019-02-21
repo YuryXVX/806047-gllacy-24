@@ -73,6 +73,13 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
 }
 
+.container-catalog {
+  background-color: #849d8f;
+  width: 1200px;
+  padding: 0;
+  margin: 0 auto;
+}
+
 .site-wrapper {
   padding: 0;
   margin: 0 auto;
@@ -1130,25 +1137,56 @@ input[type="radio"].visually-hidden {
 }
 
 /* Filter */
-/*.filter-form {
-  width: 830px;
+
+/*.container-catalog {
+  width: 1120px;
+} */
+
+.filter-form {
+  padding: 0 316px 0 27px;
   display: flex;
   flex-wrap: wrap;
-}*/
+}
 
 .filter-sort {
+  width: 194px;
+  height: 37px;
+
+  margin-top: 5px;
+  padding: 0 15px;
+
+  color: #ffffff;
   font: inherit;
   line-height: 1.13;
-  color: #ffffff;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  width: 194px;
+  box-sizing: border-box;
+
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url("..img/select-icon.png");
-  background-position: 0 0;
+
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background-image: url(../img/select-icon.png);;
+  background-size: 11px 10px;
+  background-repeat: no-repeat;
+  background-position: 169px 13px;
+}
+
+.filter-sort:hover,
+.filter-sort:focus {
+  background-color: #ffffff;
+  color: #323232;
+  background-image: url(../img/select-icon-hover.png);
+  background-size: 12px 10px;
+}
+
+.filter-sort option {
+  font: inherit;
+  color: #323232;
+  font-size: 14px;
+  line-height: 1.14;
+  padding: 0 20px;
 }
 
 .filter-form {
@@ -1271,6 +1309,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-fatcontent {
+
   width: 355px;
   height: 37px;
   display: flex;
@@ -1280,6 +1319,7 @@ input[type="radio"].visually-hidden {
   list-style: none;
   padding: 0 14px 0 45px;
   margin: 0;
+  margin-top: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 25px;
   position: relative;
@@ -1289,7 +1329,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 }
 
-.filter-fatcontent-item  label  {
+.filter-fatcontent-item label {
   font: inherit;
   font-size: 16px;
   font-weight: 500;
@@ -1429,6 +1469,7 @@ input[type="radio"].visually-hidden {
   color: #323232;
   box-shadow: inset 0px 2px 1px 0 #696969;
 }
+
 /* Catalog */
 
 .catalog-main-title {

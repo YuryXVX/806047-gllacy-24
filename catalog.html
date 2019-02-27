@@ -9,40 +9,43 @@
   <body>
     <div class="site-wrapper-catalog">
       <header class="main-header container">
-        <nav class="main-navigation">
-          <a class="main-logo" href="index.html">
-            <img src="img/logo.svg" width="150" height="65" alt="Логотип Глейси">
-          </a>
-          <ul class="nav-list">
-            <li class="nav-item link-active">
-              <a class="nav-item-link" href="#">Каталог</a>
-              <div class="nav-catalog-list-wrapper">
-                <ul class="nav-catalog-list">
-                  <li class="nav-catalog-item">
-                    <a class="nav-catalog-link" href="#"><b>Новинки</b></a>
-                  </li>
-                  <li class="nav-catalog-item catalog-item-active">
-                    <a  class="nav-catalog-link" href="catalog.html">Сливочное</a>
-                  </li>
-                  <li class="nav-catalog-item">
-                    <a class="nav-catalog-link" href="#">Щербеты</a>
-                  </li>
-                  <li class="nav-catalog-item">
-                    <a class="nav-catalog-link" href="#">Фруктовый лед</a>
-                  </li>
-                  <li class="nav-catalog-item">
-                    <a class="nav-catalog-link" href="#">Мелорин</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-item-link" href="delivery.html">Доставка и оплата</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-item-link" href="about.html">О компании</a>
-            </li>
-          </ul>
+        <div class="main-header-wrapper">
+          <nav class="main-navigation">
+            <a class="main-logo" href="index.html">
+              <img src="img/logo.svg" width="150" height="65" alt="Логотип Глейси">
+            </a>
+            <ul class="nav-list">
+              <li class="nav-item link-active">
+                <a class="nav-item-link" href="#">Каталог</a>
+                <div class="nav-catalog-list-wrapper">
+                  <ul class="nav-catalog-list">
+                    <li class="nav-catalog-item">
+                      <a class="nav-catalog-link" href="#"><b>Новинки</b></a>
+                    </li>
+                    <li class="nav-catalog-item catalog-item-active">
+                      <a  class="nav-catalog-link" href="catalog.html">Сливочное</a>
+                    </li>
+                    <li class="nav-catalog-item">
+                      <a class="nav-catalog-link" href="#">Щербеты</a>
+                    </li>
+                    <li class="nav-catalog-item">
+                      <a class="nav-catalog-link" href="#">Фруктовый лед</a>
+                    </li>
+                    <li class="nav-catalog-item">
+                      <a class="nav-catalog-link" href="#">Мелорин</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item-link" href="delivery.html">Доставка и оплата</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item-link" href="about.html">О Компании</a>
+              </li>
+            </ul>
+          </nav>
+
           <div class="user-nav-wrapper">
             <div class="button-search-list">
               <div class="search-item">
@@ -58,25 +61,27 @@
                 </div>
               </div>
             </div>
+
             <div class="login-form-list">
               <div class="login-item">
                 <a href="#" class="button-login">
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#fff"><path fill="#fff" d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>
-                  Вход
+                 Вход
                 </a>
-              </div>
-              <div class="login-form-wrapper">
-                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                  <input type="text" name="email" placeholder="Электронная почта">
-                  <input type="text" name="password" placeholder="Пароль">
-                  <button class="button-form-search" type="submit">Войти</button>
-                  <div class="login-form-registration">
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
-                  </div>
-                </form>
+                <div class="login-form-wrapper">
+                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                    <input type="text" name="email" placeholder="Электронная почта">
+                    <input type="text" name="password" placeholder="Пароль">
+                    <button class="button-form-search" type="submit">Войти</button>
+                      <div class="login-form-registration">
+                        <a href="#">Забыли пароль?</a>
+                        <a href="#">Новая регистрация</a>
+                      </div>
+                  </form>
+                </div>
               </div>
             </div>
+
             <div class="button-buy-wrapper">
               <div>
                 <a href="#" class="button-buy current">
@@ -108,7 +113,7 @@
               </div>
             </div>
           </div>
-        </nav>
+        </div>
           <div class="contact-info">
             <p class="contact-info-description">С 10 до 20, ежедневно</p>
             <a  class="contact-info-tel" href="tel:+7812450-25-25">8 812 450-25-25</a>
@@ -250,7 +255,7 @@
                 <img class="catalog-img" src="img/icecream-5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
                 <span class="catalog-price">325</span><span class="catalog-weight">/кг</span>
                 <div class="catalog-title-wrap">
-                  <a href="#" class="catalog-title">Сливочное с брусничным <br> джемом</a>
+                  <a href="#" class="catalog-title">Сливочное с брусничным &nbsp; джемом</a>
                 </div>
                 <a class="catalog-button" href="#">Быстрый просмотр</a>
               </li>
@@ -282,7 +287,7 @@
                 <img class="catalog-img" src="img/icecream-9.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
                 <span class="catalog-price">440</span><span class="catalog-weight">/кг</span>
                 <div class="catalog-title-wrap">
-                  <a href="#" class="catalog-title">Сливочно-ванильное с<br>кусочками шоколада</a>
+                  <a href="#" class="catalog-title">Сливочно-ванильное с &nbsp; кусочками шоколада</a>
                 </div>
                 <a class="catalog-button" href="#">Быстрый просмотр</a>
               </li>

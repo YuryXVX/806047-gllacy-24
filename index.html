@@ -187,7 +187,7 @@
         </section>
 
         <section class="main-info container">
-          <h2 class="main-info-title">Магазин Глэйси — это онлайн - и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
+          <h2 class="main-info-title">Магазин Глэйси &mdash; это онлайн- и офлайн - магазин по продаже мороженого собственного производства на развес</h2>
           <ul class="main-info-list">
             <li class="main-info-list-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
             </li>
@@ -218,6 +218,8 @@
         <section class="map">
           <h2 class="visually-hidden">План расположения магазина</h2>
           <div class="map-wrapper">
+            <div  class="map-api" id="google-map"></div>
+
             <img class="map-image" src="img/map.jpg" width="1200" height="430" alt="Место расположения магазина">
           </div>
           <section class="feedback">
@@ -291,7 +293,7 @@
               <label for="user-name" class="visually-hidden">Как вас зовут</label>
             </div>
             <div class="input-wrapper">
-              <input type="text" name="user-email" id="user-email" placeholder="Ваша почта для ответа?">
+              <input type="email" name="user-email" id="user-email" placeholder="Ваша почта для ответа?">
               <label for="user-email" class="visually-hidden">Ваша почта для ответа?</label>
             </div>
             <div class="input-wrapper">
@@ -302,65 +304,15 @@
           </form>
           <button class="modal-close"><span class="visually-hidden">Закрыть</span></button>
         </div>
-
       </section>
 
     </div>
-  <script>
-    var link = document.querySelector(".popup-open-button");
-    var popup = document.querySelector(".modal-content");
-    var close = popup.querySelector(".modal-close");
 
-    var login = popup.querySelector("[name=user-name]");
-    var email = popup.querySelector("[name=user-email]");
-    var form = popup.querySelector("form");
-    var message = popup.querySelector("[name=message-user]");
-
-    var isStorageSupport = true;
-    var storage = "";
-
-    try {
-      storage = localStorage.getItem("login");
-    } catch (err) {
-      isStorageSupport = false;
-    }
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-      if (storage) {
-        login.value = storage;
-        email.focus();
-      } else {
-        login.focus();
-      }
-    });
-
-    close.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
-    });
-
-    form.addEventListener("submit", function (evt) {
-      if (!login.value || !email.value || !message.value) {
-        evt.preventDefault();
-        console.log("Нужно ввести логин/эл. почту/сообщение");
-      } else {
-        if (isStorageSupport) {
-          localStorage.setItem("login", login.value);
-        }
-      }
-    });
-
-    window.addEventListener("keydown", function (evt) {
-      if (evt.keyCode === 27) {
-        evt.preventDefault();
-        if (popup.classList.contains("modal-show")) {
-          popup.classList.remove("modal-show");
-        }
-      }
-    });
-
+  <script src="js/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3NrEOrlD4yli2D8GckkHWqtd77WV0aIU&callback=initMap" async defer>
   </script>
   </body>
 </html>
+
+
+

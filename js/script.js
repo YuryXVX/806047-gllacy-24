@@ -58,7 +58,7 @@ window.addEventListener("keydown", function (evt) {
 function initMap() {
   var opt = {
     center: {lat:59.939202, lng:30.327438},
-    zoom: 16.5
+    zoom: 16.6
   };
 
   var myMap = new google.maps.Map(document.getElementById("google-map"), opt);

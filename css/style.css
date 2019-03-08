@@ -228,7 +228,7 @@ input[type="radio"].visually-hidden {
 .button-search:hover,
 .button-search:focus {
   color: #323232;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #f8f7f4;
 }
 
 .button-search:hover .search-form-wrapper {
@@ -276,7 +276,7 @@ input[type="radio"].visually-hidden {
 .login-item a:hover,
 .login-item a:focus {
   color: #323232;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #f8f7f4;
 }
 
 .button-buy {
@@ -309,7 +309,12 @@ input[type="radio"].visually-hidden {
 .button-buy:hover,
 .button-buy:focus {
   color: #323232;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #f8f7f4;
+}
+
+.button-buy.current {
+  background-color: #f8f7f4;
+  color: #323232;
 }
 
 .button-buy.current::before {

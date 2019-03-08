@@ -1,3 +1,4 @@
+/* Popup */
 var link = document.querySelector(".popup-open-button");
 var popup = document.querySelector(".modal-content");
 var close = popup.querySelector(".modal-close");
@@ -35,8 +36,7 @@ close.addEventListener("click", function (evt) {
 form.addEventListener("submit", function (evt) {
   if (!login.value || !email.value || !message.value) {
     evt.preventDefault();
-    popup.classList.add("modal-error");
-    /*console.log("Нужно ввести логин/эл. почту/сообщение");*/
+    console.log("Нужно ввести логин/эл. почту/сообщение");
     } else {
       if (isStorageSupport) {
         localStorage.setItem("login", login.value);
@@ -54,7 +54,7 @@ window.addEventListener("keydown", function (evt) {
 });
 
 
-/* map */
+/* Map */
 
 function initMap() {
   var opt = {

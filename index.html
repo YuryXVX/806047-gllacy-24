@@ -72,8 +72,8 @@
                 <a href="#" class="button-login">Вход</a>
                 <div class="login-form-wrapper">
                   <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                    <input type="text" name="email" placeholder="Электронная почта">
-                    <input type="text" name="password" placeholder="Пароль">
+                    <input type="email" name="email" placeholder="Электронная почта" required>
+                    <input type="text" name="password" placeholder="Пароль" required>
                     <button class="button-form-search" type="submit">Войти</button>
                       <div class="login-form-registration">
                         <a href="#">Забыли пароль?</a>
@@ -180,7 +180,7 @@
         </section>
 
         <section class="main-info container">
-          <h2 class="main-info-title">Магазин Глэйси &mdash; это онлайн- и офлайн - магазин по продаже мороженого собственного производства на развес</h2>
+          <h2 class="main-info-title">Магазин Глэйси &mdash; это онлайн-&#8194;и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
           <ul class="main-info-list">
             <li class="main-info-list-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
             </li>
@@ -202,21 +202,16 @@
           <div class="blog-form-wrapper">
             <form class="blog-form" action="https://echo.htmlacademy.ru" method="post">
               <label class="blog-description-form" for="blog-description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
-              <input type="text" id="blog-description" name="blog-description" placeholder="Электронная почта">
+              <input type="text" id="blog-description" name="blog-description" placeholder="Электронная почта" required>
               <button class="blog-form-button" type="submit">Отправить</button>
             </form>
           </div>
         </section>
 
         <section class="map">
-          <h2 class="visually-hidden">План расположения магазина</h2>
-          <div class="map-wrapper">
-            <div  class="map-api" id="google-map"></div>
-
-            <img class="map-image" src="img/map.jpg" width="1200" height="430" alt="Место расположения магазина">
-          </div>
-          <section class="feedback">
-           <h2 class="visually-hidden">Обратная связь</h2>
+          <div class="feedback-wrapper container">
+            <div class="feedback">
+            <h2 class="visually-hidden">Обратная связь</h2>
             <p class="feedback-description">Адрес главного офиса и офлайн-магазина:</p>
             <p class="feedback-adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
             <div class="order-info">
@@ -225,7 +220,13 @@
               <p class="order-info-worktime">(с 10 до 20 ежедневно)</p>
             </div>
             <a class="popup-open-button" href="modal.html">Форма обратной связи</a>
-          </section>
+            </div>
+          </div> 
+          <h2 class="visually-hidden">План расположения магазина</h2>
+          <div class="map-wrapper">
+            <div  class="map-api" id="google-map"></div>
+            <img class="map-image" src="img/map.jpg" width="1200" height="430" alt="Место расположения магазина">
+          </div>
         </section>
       </main>
 
@@ -282,15 +283,15 @@
           <span class="modal-title">Мы обязательно вам ответим!</span>
           <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="input-wrapper">
-              <input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?">
+              <input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?" required>
               <label for="user-name" class="visually-hidden">Как вас зовут</label>
             </div>
             <div class="input-wrapper">
-              <input type="email" name="user-email" id="user-email" placeholder="Ваша почта для ответа?">
+              <input type="email" name="user-email" id="user-email" placeholder="Ваша почта для ответа?" required>
               <label for="user-email" class="visually-hidden">Ваша почта для ответа?</label>
             </div>
             <div class="input-wrapper">
-              <textarea id="message-user" name="message-user" placeholder="Напишите что-нибудь..."></textarea>
+              <textarea id="message-user" name="message-user" placeholder="Напишите что-нибудь..." required></textarea>
               <label for="message-user" class="visually-hidden">Напишите что-нибудь...</label>
             </div>
             <button type="submit" class="modal-button">Отправить</button>

@@ -35,7 +35,8 @@ close.addEventListener("click", function (evt) {
 form.addEventListener("submit", function (evt) {
   if (!login.value || !email.value || !message.value) {
     evt.preventDefault();
-    console.log("Нужно ввести логин/эл. почту/сообщение");
+    popup.classList.add("modal-error");
+    /*console.log("Нужно ввести логин/эл. почту/сообщение");*/
     } else {
       if (isStorageSupport) {
         localStorage.setItem("login", login.value);

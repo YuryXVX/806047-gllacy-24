@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Сливочное мороженное</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="site-wrapper-catalog">
@@ -48,64 +48,59 @@
 
           <div class="user-nav-wrapper">
             <div class="button-search-list">
-              <div class="search-item">
-                <a href="#" class="button-search">
-                  <span class="visually-hidden">Кнопка поиска по сайту</span>
-                </a>
-                <div class="search-form-wrapper">
-                  <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                    <input type="text" name="search-form" placeholder="Что ищем?">
-                    <button class="visually-hidden" type="submit">Найти</button>
-                  </form>
-                </div>
+              <a href="#" class="button-search">
+                <span class="visually-hidden">Кнопка поиска по сайту</span>
+              </a>
+              <div class="search-form-wrapper">
+                <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <input type="text" name="search-form" placeholder="Что ищем?">
+                  <button class="visually-hidden" type="submit">Найти</button>
+                </form>
               </div>
             </div>
 
             <div class="login-form-list">
-              <div class="login-item">
-                <a href="#" class="button-login">
-                 Вход
-                </a>
-                <div class="login-form-wrapper">
-                  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                    <input type="text" name="email" placeholder="Электронная почта" required>
-                    <input type="text" name="password" placeholder="Пароль" required>
-                    <button class="button-form-search" type="submit">Войти</button>
-                      <div class="login-form-registration">
-                        <a href="#">Забыли пароль?</a>
-                        <a href="#">Новая регистрация</a>
-                      </div>
-                  </form>
-                </div>
-              </div>
+              <a href="#" class="button-login">
+                Вход
+              </a>
+              <div class="login-form-wrapper">
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <input type="text" name="email" placeholder="Электронная почта" required>
+                  <input type="text" name="password" placeholder="Пароль" required>
+                  <button class="button-form-search" type="submit">Войти</button>
+                    <div class="login-form-registration">
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Новая регистрация</a>
+                    </div>
+                </form>
+              </div> 
             </div>
 
             <div class="button-buy-wrapper">
-              <div>
-                <a href="#" class="button-buy current">2 товара</a>
-                <div class="buy-active-wrapper">
-                  <ul class="buy-list">
-                    <li class="buy-item">
-                      <button class="buy-button-remove" type="button"><span class="visually-hidden">Убрать из корзины</span></button>
-                      <img class="buy-img" src="img/icecream-small-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-                      <a href="#" class="buy-description">Пломбир с апельсиновым джемом</a>
-                      <p class="buy-calculator">1,5 кг x<span> 200 руб.</span></p>
-                      <p class="buy-price">300 руб</p>
-                    </li>
-                    <li class="buy-item">
-                      <button class="buy-button-remove" type="button"><span class="visually-hidden">Убрать из корзины</span></button>
-                      <img class="buy-img" src="img/icecream-small-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
-                      <a href="#" class="buy-description">Клубничный пломбир с присыпкой <br> из белого шоколада</a>
-                      <p class="buy-calculator">1,5 кг x <span>300 руб.</span></p>
-                      <p class="buy-price">450 руб</p>
-                    </li>
-                  </ul>
-                  <div class="buy-item-footer">
-                    <span class="buy-total-price">Итого: 750 руб.</span>
-                    <a class="buy-button-order" href="#">Оформить заказ</a>
-                  </div>
+              <a href="#" class="button-buy current">2 товара</a>
+              <div class="buy-active-wrapper">
+                <ul class="buy-list">
+                  <li class="buy-item">
+                    <button class="buy-button-remove" type="button"><span class="visually-hidden">Убрать из корзины</span></button>
+                    <img class="buy-img" src="img/icecream-small-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                    <a href="#" class="buy-description">Пломбир с апельсиновым джемом</a>
+                    <p class="buy-calculator">1,5 кг x<span> 200 руб.</span></p>
+                    <p class="buy-price">300 руб</p>
+                  </li>
+                  <li class="buy-item">
+                    <button class="buy-button-remove" type="button"><span class="visually-hidden">Убрать из корзины</span></button>
+                    <img class="buy-img" src="img/icecream-small-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                    <a href="#" class="buy-description">Клубничный пломбир с присыпкой из белого шоколада</a>
+                    <p class="buy-calculator">1,5 кг x <span>300 руб.</span></p>
+                    <p class="buy-price">450 руб</p>
+                  </li>
+                </ul>
+                <div class="buy-item-footer">
+                  <span class="buy-total-price">Итого: 750 руб.</span>
+                  <a class="buy-button-order" href="#">Оформить заказ</a>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>
@@ -118,9 +113,9 @@
       <main class="container">
         <div class="breadcrumbs-wrapper container">
           <ul class="breadcrumbs">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li class="breadcrumbs-current"><a href="#">Сливочное</a></li>
+            <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs-item"><a class="breadcrumbs-link" href="#">Каталог</a></li>
+            <li  class="breadcrumbs-item"><a class="breadcrumbs-link current" href="#">Сливочное</a></li>
           </ul>
         </div>
         <h1 class="catalog-main-title">Сливочное мороженое</h1>

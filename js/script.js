@@ -1,4 +1,5 @@
 /* Popup */
+
 var link = document.querySelector(".popup-open-button");
 var popup = document.querySelector(".modal-content");
 var close = popup.querySelector(".modal-close");

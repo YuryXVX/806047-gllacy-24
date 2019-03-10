@@ -231,7 +231,11 @@ input[type="radio"].visually-hidden {
   background-color: #f8f7f4;
 }
 
-.button-search:hover .search-form-wrapper {
+.button-search-list {
+  position: relative;
+}
+
+.button-search-list:hover .search-form-wrapper {
   display: block;
 }
 
@@ -247,8 +251,8 @@ input[type="radio"].visually-hidden {
   line-height: 1.14;
   margin-right: 5px;
   margin-left: 6px;
+  color: #ffffff;
 }
-
 
 .button-login::before {
   content: "";
@@ -265,16 +269,12 @@ input[type="radio"].visually-hidden {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='21' height='19' viewBox='0 0 21 19'%3E%3Cg fill='%23000'%3E%3Cpath d='M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z'/%3E%3Cpath d='M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
-.button-login:hover .login-form-wrapper {
+.login-form-list:hover .login-form-wrapper {
   display: block;
 }
 
-.login-item a {
-  color: #ffffff;
-}
-
-.login-item a:hover,
-.login-item a:focus {
+.button-login:hover,
+.button-login:focus {
   color: #323232;
   background-color: #f8f7f4;
 }
@@ -477,6 +477,9 @@ input[type="radio"].visually-hidden {
 }
 
 .login-form input {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 241px;
   padding: 13px 46px 13px 10px;
   margin-bottom: 22px;
   border-radius: 5px;
@@ -580,6 +583,9 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form input {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 311px; 
   padding: 11px 110px 11px 15px;
   border-radius: 5px;
   border: none;
@@ -929,11 +935,11 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
-.breadcrumbs li {
+.breadcrumbs-item {
   position: relative;
 }
 
-.breadcrumbs a {
+.breadcrumbs-link {
   margin-right: 20px;
   font-size: 14px;
   color: #ffffff;
@@ -941,8 +947,8 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.breadcrumbs li::before,
-.breadcrumbs li::before {
+.breadcrumbs-item::before,
+.breadcrumbs-item::before {
   content: "»";
 
   position: absolute;
@@ -952,16 +958,16 @@ input[type="radio"].visually-hidden {
   height: 13px;
 }
 
-.breadcrumbs li:last-child::before {
+.breadcrumbs-item:last-child::before {
   display: none;
 }
 
-.breadcrumbs a:hover,
-.breadcrumbs a:focus {
+.breadcrumbs-link:hover,
+.breadcrumbs-link:focus {
   color: #ffbc9e;
 }
 
-.breadcrumbs-current a {
+.breadcrumbs-link.current {
   border-bottom: none;
 }
 
@@ -1925,7 +1931,7 @@ input[type="radio"].visually-hidden {
 
 .blog-post {
   width: 289px;
-  padding: 6px 254px 50px 19px;
+  padding: 26px 254px 75px 19px;
   border-radius: 15px;
   background-color: #ffffff;
   background-image: url("../img/bg-ice-cream.jpg");
@@ -1935,7 +1941,9 @@ input[type="radio"].visually-hidden {
 
 .blog-post-title {
   font-size: 16px;
+  margin: 0;
   color: #323232;
+  margin-bottom: 3px;
 }
 
 .blog-post-link {
@@ -1944,8 +1952,7 @@ input[type="radio"].visually-hidden {
   color: #323232;
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  letter-spacing: 1.25;
-  margin-top: -15px;
+  line-height: 1.25;
 }
 
 .blog-post-link:hover,
@@ -1959,15 +1966,18 @@ input[type="radio"].visually-hidden {
 
 .blog-form-wrapper {
   margin-left: auto;
-  width: 550px;
+  width: 560px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   background-image: url("../img/bg-blog-pattern.png");
-  background-size: 580px 220px;
-  background-repeat: repeat;
+  background-size: 580px 224px;
+  background-repeat: no-repeat;
   padding: 5px;
   border-radius: 15px;
 }
 
 .blog-form {
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -1986,13 +1996,16 @@ input[type="radio"].visually-hidden {
   display: block;
   color: #5a5a5a;
   font-size: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .blog-form input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 368px;
   display: inline-block;
   vertical-align: bottom;
-  padding: 15px 168px 15px 15px;
+  padding: 15px 160px 13px 15px;
   border: none;
   -webkit-box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
           box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
@@ -2020,7 +2033,7 @@ input[type="radio"].visually-hidden {
 .blog-form-button {
   margin-left: auto;
   border: none;
-  padding: 6px 20px;
+  padding: 5px 18px;
   border-radius: 30px;
   -webkit-box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
           box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
